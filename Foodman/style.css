@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav, .hero-section {
+    display: flex;
+    padding: 25px 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: rgb(253, 101, 0);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.black {
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+    font-size: 15px; 
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: rgb(253, 101, 0);
+    transition: 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* .cart {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(253, 101, 0);
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.cart:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.cart img {
+    width: 20px;
+    height: 20px;
+    padding-bottom: 2px;
+}
+
+.cart img:hover {
+    background-color: rgb(245, 115, 28);
+    transition: 0.3s;
+} */
+
+.cart .cart-btn {
+    background-color: rgb(253, 101, 0);
+    color: #fff;
+    padding: 8px 10px;
+    font-size: 20px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side {
+    width: 50%;
+    animation: slideFromRight 0.5s ease-out forwards;
+}
+
+.right-side {
+    width: 50%;
+    margin-right: 50px;
+}
+
+.hero-title {
+    font-size: 50px;
+    font-weight: 750;
+    line-height: 60px;
+    animation: slideFromBottom 0.7s ease-out forwards;
+}
+
+.orange {
+    color: rgb(253, 101, 0);;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    margin: 20px 0;
+    line-height: 25px;
+    animation: slideFromBottom 1s ease-out forwards;
+}
+
+.hero-button {
+    width: 130px;
+    height: 45px;
+    background-color: rgb(253, 101, 0);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    animation: slideFromBottom 1.2s ease-out forwards;
+}
+
+.hero-button:hover {
+    background-color: rgb(245, 115, 28);
+    transition: 0.3s;
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.special-dish {
+    padding: 25px 200px;
+}
+
+.special-dish-header {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.special-dish-header h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.special-dish-header p {
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto 0;
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+}
+
+.food-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.food-list .card {
+    display: block;
+    padding: 20px;
+    gap: 10px;
+    width: 250px;
+}
+
+.food-list .card img {
+    width: 150px;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+}
+
+.food-list .card .title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.food-list .card .description {
+    font-size: 14px;
+    color: rgb(120, 120, 120);
+    padding: 10px 0;
+    line-height: 1.4;
+    width: 250px;
+    margin: 0 auto;   
+}
+
+.food-list .card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.card .stars {
+    color: rgb(255, 251, 0);
+}
+
+.food-list .card .price-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.food-list .card .price-button .price {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.food-list .card .price-button .add-to-cart {
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    background-color: rgb(253, 101, 0);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
