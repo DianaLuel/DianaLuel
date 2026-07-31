@@ -127,7 +127,7 @@ nav {
   transition: 0.5s;
 }
 
-.nav__links:open {
+.nav__links.open {
     transform:translateY(0);
 }
 

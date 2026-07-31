@@ -12,14 +12,14 @@ body {
 
 nav, .hero-section {
     display: flex;
-    padding: 25px 200px;
+    padding: 25px 120px;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo a {
     color: rgb(253, 101, 0);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     text-decoration: none;
 }
@@ -31,8 +31,8 @@ nav, .hero-section {
 nav ul {
     display: flex;
     list-style: none;
-    font-weight: 600;
-    font-size: 15px; 
+    font-weight: 400;
+    font-size: 18px; 
 }
 
 nav ul li {
@@ -263,12 +263,25 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     nav {
-        padding: 25px 40px;
+        padding: 1rem;
         position: relative;
+        background-color: rgb(253, 101, 0);
+    }
+
+    .logo a {
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .black {
+        color: black;
     }
 
     .menu-toggle {
         display: block;
+        color: #fff;
     }
 
     .cart {
@@ -277,10 +290,11 @@ nav ul li a:hover {
 
     .nav-links {
         position: absolute;
-        top: 100%;            
+        top: 100%;
+        margin-top: 0.1rem; 
         left: 0;
         width: 100%;
-        background-color: #ffffff;
+        background-color: rgb(253, 101, 0);
         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
         
         transform: translateY(-150%);
@@ -292,14 +306,18 @@ nav ul li a:hover {
     .nav-links ul {
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
+        padding: 2rem;
     }
+
+    .nav-links ul a:hover {
+        color: #fff;
+    }    
 
     .nav-links ul li {
         margin: 12px 0;
     }
 
-    /* Active Class: Slides the menu down into view */
+
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
@@ -322,11 +340,65 @@ nav ul li a:hover {
         line-height: 40px;
     }
 
-    .special-dish {
-        justify-content: center;
-    }
+    /* .special-dish {
+    padding: 20px 10px;
+  }
 
-    .special-dish-header {
-        max-width: 300px;
-    }
+  .food-list {
+    display: flex;
+    flex-direction: row;        
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .food-list .card {
+    flex: 1;                
+    padding: 10px 5px;
+  }
+
+  .food-list .card img {
+    width: 90px;               
+  }
+
+  .food-list .card .title {
+    font-size: 14px;
+  }
+
+  .food-list .card .description {
+    width: 100%;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .food-list .card .price-button {
+    flex-direction: column;  
+    gap: 5px;
+  } */
+
+  .special-dish {
+    padding: 40px 200px;
+  }
+
+  .special-dish-header {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .food-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+  }
+
+  .food-list .card {
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+  }
+
+  .food-list .card .description {
+    width: 100%; /* Allows text to scale naturally within card constraints */
+    max-width: 250px;
+  }
 }
