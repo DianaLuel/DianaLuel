@@ -12,13 +12,7 @@ Thanks for checking out this front-end coding challenge.
 
 ## The challenge
 
-Your challenge is to build out this blog preview card and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
-
-- See hover and focus states for all interactive elements on the page
+centering the card elements was a lil challenging but fixed it also the figma design was really helpful
 
 ### Want some support on the challenge? 
 
