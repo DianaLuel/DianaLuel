@@ -19,6 +19,36 @@ body{
     padding-top:50px;
 }
 
+.pencil-trail{
+    position:fixed;
+    inset:0;
+    z-index:9998;
+    pointer-events:none;
+}
+
+.pencil-cursor{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9999;
+    width:54px;
+    height:54px;
+    pointer-events:none;
+    opacity:0;
+    transform-origin:50% 90%;
+    transition:opacity .15s ease;
+    will-change:transform;
+}
+
+.pencil-cursor.is-visible{
+    opacity:1;
+}
+
+.pencil-cursor-active,
+.pencil-cursor-active *{
+    cursor:none !important;
+}
+
 .hero-page{
     width:100%;
 }
