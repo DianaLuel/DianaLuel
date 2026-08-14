@@ -99,13 +99,30 @@
 // console.log("Even numbers:", Even);
 
 
-let number = 99.7;
+// let number = 99.7;
 
-console.log("Original number:", number);
-console.log("Floored number:", Math.floor(number));
-console.log("Ceiled number:", Math.ceil(number));
-console.log("Rounded number:", Math.round(number));
-console.log("Square root of number:", Math.sqrt(100));
-console.log("Power of number 2^3:", Math.pow(2, 3));
-console.log("Random number between 0 and 1:", Math.random());
-console.log("Random number between 0 and 100:", Math.floor(Math.random() * 101));
+// console.log("Original number:", number);
+// console.log("Floored number:", Math.floor(number));
+// console.log("Ceiled number:", Math.ceil(number));
+// console.log("Rounded number:", Math.round(number));
+// console.log("Square root of number:", Math.sqrt(100));
+// console.log("Power of number 2^3:", Math.pow(2, 3));
+// console.log("Random number between 0 and 1:", Math.random());
+// console.log("Random number between 0 and 100:", Math.floor(Math.random() * 101));
+
+
+
+// WHAT IS HIDING AMONGEST THE CROWD?
+
+function detectWord(word) {
+    hiddenWord = '';
+    for (let i=0; i < word.length; i++) {
+        if (word[i] === word[i].toLowerCase()) {
+            hiddenWord += word[i];
+        }
+    }
+    return hiddenWord;
+}
+
+
+console.log(detectWord("HTAFRcARTGDaHAGDVTUHtNHFKFIV"));
