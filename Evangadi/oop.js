@@ -77,23 +77,35 @@
 // console.log(student);
 
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log("Original numbers:", numbers);
+// console.log("Original numbers:", numbers);
 
-let newNumbers = numbers.map(value => value * 2);
+// let newNumbers = numbers.map(value => value * 2);
 
-console.log("Doubled numbers:", newNumbers);
+// console.log("Doubled numbers:", newNumbers);
 
-let result = newNumbers.filter(value => {
-    return value > 10;
-});
+// let result = newNumbers.filter(value => {
+//     return value > 10;
+// });
 
-console.log("Numbers greater than 10:", result);
+// console.log("Numbers greater than 10:", result);
 
-let Even = newNumbers.filter(value => {
-    evenNumbers = value % 2 === 0;
-    return evenNumbers;
-});
+// let Even = newNumbers.filter(value => {
+//     evenNumbers = value % 2 === 0;
+//     return evenNumbers;
+// });
 
-console.log("Even numbers:", Even);
+// console.log("Even numbers:", Even);
+
+
+let number = 99.7;
+
+console.log("Original number:", number);
+console.log("Floored number:", Math.floor(number));
+console.log("Ceiled number:", Math.ceil(number));
+console.log("Rounded number:", Math.round(number));
+console.log("Square root of number:", Math.sqrt(100));
+console.log("Power of number 2^3:", Math.pow(2, 3));
+console.log("Random number between 0 and 1:", Math.random());
+console.log("Random number between 0 and 100:", Math.floor(Math.random() * 101));
