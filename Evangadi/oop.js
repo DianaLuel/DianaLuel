@@ -55,8 +55,25 @@
 // console.log(Challa.fullname());
 // console.log(Challa.sing());
 
-let example = new String("Abebe");
-let name = "Belete";
+// let example = new String("Abebe");
+// let name = "Belete";
 
-console.log(example.length);
-console.log(name.toUpperCase());
+// console.log(example.length);
+// console.log(name.toUpperCase());
+
+let student = ["Abebe", "Kebede", "Computer Science", 25, "Male"];
+
+student.forEach((value, index) => {
+    console.log(value, index);
+});
+
+student.shift();
+console.log(student);
+student.unshift("Abebe");
+console.log(student);
+student.pop();
+console.log(student);
+student.push("Female");
+console.log(student);
+
+
