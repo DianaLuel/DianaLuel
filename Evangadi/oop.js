@@ -38,19 +38,20 @@
 // console.log(Almaz.sing());
 
 
-function Person(fn, ln) {
-    this.firstname = fn;
-    this.lastname = ln;
+// function Person(fn, ln) {
+//     this.firstname = fn;
+//     this.lastname = ln;
 
-    this.fullname = function() {
-        return this.firstname + " " + this.lastname;
-    };
+//     this.fullname = function() {
+//         return this.firstname + " " + this.lastname;
+//     };
 
-    this.sing = () =>{
-        return "lu lu lu lu";
-    }
-}
+//     this.sing = () =>{
+//         return "lu lu lu lu";
+//     }
+// }
 
-let Challa = new Person("Challa", "Kebede");
-console.log(Challa.fullname());
-console.log(Challa.sing());
+// let Challa = new Person("Challa", "Kebede");
+// console.log(Challa.fullname());
+// console.log(Challa.sing());
+
