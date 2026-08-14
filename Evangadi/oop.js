@@ -61,19 +61,39 @@
 // console.log(example.length);
 // console.log(name.toUpperCase());
 
-let student = ["Abebe", "Kebede", "Computer Science", 25, "Male"];
+// let student = ["Abebe", "Kebede", "Computer Science", 25, "Male"];
 
-student.forEach((value, index) => {
-    console.log(value, index);
+// student.forEach((value, index) => {
+//     console.log(value, index);
+// });
+
+// student.shift();
+// console.log(student);
+// student.unshift("Abebe");
+// console.log(student);
+// student.pop();
+// console.log(student);
+// student.push("Female");
+// console.log(student);
+
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log("Original numbers:", numbers);
+
+let newNumbers = numbers.map(value => value * 2);
+
+console.log("Doubled numbers:", newNumbers);
+
+let result = newNumbers.filter(value => {
+    return value > 10;
 });
 
-student.shift();
-console.log(student);
-student.unshift("Abebe");
-console.log(student);
-student.pop();
-console.log(student);
-student.push("Female");
-console.log(student);
+console.log("Numbers greater than 10:", result);
 
+let Even = newNumbers.filter(value => {
+    evenNumbers = value % 2 === 0;
+    return evenNumbers;
+});
 
+console.log("Even numbers:", Even);
