@@ -112,17 +112,34 @@
 
 
 
-// WHAT IS HIDING AMONGEST THE CROWD?
+// // WHAT IS HIDING AMONGEST THE CROWD?
 
-function detectWord(word) {
-    hiddenWord = '';
-    for (let i=0; i < word.length; i++) {
-        if (word[i] === word[i].toLowerCase()) {
-            hiddenWord += word[i];
-        }
+// function detectWord(word) {
+//     hiddenWord = '';
+//     for (let i=0; i < word.length; i++) {
+//         if (word[i] === word[i].toLowerCase()) {
+//             hiddenWord += word[i];
+//         }
+//     }
+//     return hiddenWord;
+// }
+
+
+// console.log(detectWord("HTAFRcARTGDaHAGDVTUHtNHFKFIV"));
+
+
+// ARRAY 1 CAN BE NESTED IN ARRAY 2
+// IF ARRAY 1 MIN > ARRAY 2 MIN
+// ARRAY 1 MAX < ARRAY 2 MAX
+
+function canNest(arr1, arr2) {
+    if (Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2)) {
+        return true;
+    } else {
+        return false;
     }
-    return hiddenWord;
 }
 
-
-console.log(detectWord("HTAFRcARTGDaHAGDVTUHtNHFKFIV"));
+console.log(canNest([1, 2, 3], [0, 4])); // true
+console.log(canNest([1, 2, 3], [0, 4, 5])); // true
+console.log(canNest([1, 2, 3], [0, 2])); // false
