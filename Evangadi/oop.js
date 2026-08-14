@@ -55,3 +55,8 @@
 // console.log(Challa.fullname());
 // console.log(Challa.sing());
 
+let example = new String("Abebe");
+let name = "Belete";
+
+console.log(example.length);
+console.log(name.length);
