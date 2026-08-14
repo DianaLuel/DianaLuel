@@ -59,4 +59,4 @@ let example = new String("Abebe");
 let name = "Belete";
 
 console.log(example.length);
-console.log(name.length);
+console.log(name.toUpperCase());
