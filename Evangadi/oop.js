@@ -310,22 +310,58 @@
 
 // console.log(text.replaceAll("cat", "dog"));
 
-let text = "cat bat rat";
+// let text = "cat bat rat";
 
-console.log(text.substring(4, 7));
+// console.log(text.substring(4, 7));
 
-console.log(text.slice(4, 7));
+// console.log(text.slice(4, 7));
 
-console.log(text.substring(7, 4));
+// console.log(text.substring(7, 4));
 
-// You might think:
-// "Start 3 characters from the end."
-// But that's not what substring() does.
-// substring() does not understand negative indexes.
-// It converts negative numbers to 0.
-console.log(text.substring(-3));
+// // You might think:
+// // "Start 3 characters from the end."
+// // But that's not what substring() does.
+// // substring() does not understand negative indexes.
+// // It converts negative numbers to 0.
+// console.log(text.substring(-3));
 
-console.log(text.substring(0, 3));
+// console.log(text.substring(0, 3));
 
-// Start at index 4 and take everything until the end.
-console.log(text.substring(4));
+// // Start at index 4 and take everything until the end.
+// console.log(text.substring(4));
+
+
+
+// MAGIC ARRAY
+
+function magicArray(arr) {
+    let primeNumbers = [];
+    for (let i=0; i < arr.length; i++) {
+        let isPrime = arr[i] > 1;
+
+        for ( let j=2; j < arr[i]; j++) {
+            if (arr[i] % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            primeNumbers.push(arr[i]);
+        }
+    }
+
+    let sum = 0;
+    for (let i=0; i < primeNumbers.length; i++) {
+        sum += primeNumbers[i];
+    }
+
+    if (sum === arr[0]) {
+        // return `Array ${arr} is magicArray.`;
+        return `Array ${arr} is magicArray.`
+    }
+    return `Array ${arr} is not magicArray.`;
+}
+
+
+console.log(magicArray([10, 2, 3, 5])); // true
