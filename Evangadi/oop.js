@@ -379,19 +379,19 @@
 // console.log(magicArray([8, 5, -5, 5, 3]));
 
 
-// BUUBLE SORT
+// // BUUBLE SORT
 
-console.log(bubbleSort([2, 3, 5, 7, 18, 11, 1, 9, 6, 7]));
+// console.log(bubbleSort([2, 3, 5, 7, 18, 11, 1, 9, 6, 7]));
 
-function bubbleSort(arr) {
-    for (let i =0; i < arr.length; i++) {
-        for (let j=0; j < arr.length - 1; j++) {
-            if (arr[j] > arr[j+1]) {
-                let temp = arr[j];
-                arr[j]= arr[j+1];
-                arr[j+1] = temp;
-            }
-        }
-    }
-    return arr;
-}
+// function bubbleSort(arr) {
+//     for (let i =0; i < arr.length; i++) {
+//         for (let j=0; j < arr.length - 1; j++) {
+//             if (arr[j] > arr[j+1]) {
+//                 let temp = arr[j];
+//                 arr[j]= arr[j+1];
+//                 arr[j+1] = temp;
+//             }
+//         }
+//     }
+//     return arr;
+// }
