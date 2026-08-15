@@ -234,11 +234,98 @@
 // }
 
 
-let text = "The rain in Spain stays mainly in the plain.";
+// let text = "The rain in Spain stays mainly in the plain.";
 
-let results = text.matchAll(/ain/g);
+// let results = text.matchAll(/ain/g);
 
-for (let result of results) {
-    console.log(result[0]); // matched text
-    console.log(result.index); // position
-}
+// for (let result of results) {
+//     console.log(result[0]); // matched text
+//     console.log(result.index); // position
+// }
+
+// let first = "Diana";
+// let last = "Luel";
+
+// console.log(first.concat(" ", last));
+
+// console.log(`${first} ${last}`);
+
+// console.log(first + " " + last);
+
+// console.log(first, last);
+
+// let text = "hello hello";
+
+// console.log(text.lastIndexOf("hello")); // 6
+
+
+// console.log("Hi ".repeat(3));
+
+// let number = "5";
+
+// console.log(number.padStart(3, "0"));
+
+// console.log(number.padEnd(3, "0"));
+
+// let text = "cat bat rat";
+
+// // This uses Regular Expressions (RegExp).
+// // Generally, it matches:
+// // A-Z
+// // a-z
+// // 0-9
+// // _
+// // + means:
+// // one or more of the thing before it
+// // \w+
+// // means   one or more word characters
+// // at is literal text
+
+// console.log(text.match(/\w+at/g));
+
+// // returns a negative number because "apple" comes before "banana" alphabetically.
+// console.log("apple".localeCompare("banana"));
+
+// let fruits = ["banana", "apple", "orange"];
+
+// fruits.sort((a, b) => a.localeCompare(b));
+
+// console.log(fruits);
+
+
+// let text = "cat bat rat";
+
+// console.log(text.slice(0, 3));
+
+// console.log(text.slice(4, 7));
+
+// console.log(text.slice(-3));
+
+// console.log(text.replace("cat", "dog"));
+
+
+// let text = "cat cat cat";
+
+// console.log(text.replace("cat", "dog"));
+
+// console.log(text.replaceAll("cat", "dog"));
+
+let text = "cat bat rat";
+
+console.log(text.substring(4, 7));
+
+console.log(text.slice(4, 7));
+
+console.log(text.substring(7, 4));
+
+// You might think:
+// "Start 3 characters from the end."
+// But that's not what substring() does.
+// substring() does not understand negative indexes.
+// It converts negative numbers to 0.
+console.log(text.substring(-3));
+
+console.log(text.substring(0, 3));
+
+// Start at index 4 and take everything until the end.
+console.log(text.substring(4));
