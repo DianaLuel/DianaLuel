@@ -128,18 +128,117 @@
 // console.log(detectWord("HTAFRcARTGDaHAGDVTUHtNHFKFIV"));
 
 
-// ARRAY 1 CAN BE NESTED IN ARRAY 2
-// IF ARRAY 1 MIN > ARRAY 2 MIN
-// ARRAY 1 MAX < ARRAY 2 MAX
+// // ARRAY 1 CAN BE NESTED IN ARRAY 2
+// // IF ARRAY 1 MIN > ARRAY 2 MIN
+// // ARRAY 1 MAX < ARRAY 2 MAX
 
-function canNest(arr1, arr2) {
-    if (Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2)) {
-        return true;
-    } else {
-        return false;
-    }
+// function canNest(arr1, arr2) {
+//     if (Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(canNest([1, 2, 3], [0, 4])); // true
+// console.log(canNest([1, 2, 3], [0, 4, 5])); // true
+// console.log(canNest([1, 2, 3], [0, 2])); // false
+
+
+// let users = ["Diana", "Abebe", "Sara"];
+
+// let result = users.filter(user => user.includes("a"));
+
+// console.log(result);
+
+// let username = "   Diana   ";
+
+// console.log(username.trim());
+// // "Diana"
+
+// let name = "Diana Luel";
+
+// let parts = name.split(" ");
+
+// console.log(parts);
+// // ["Diana", "Luel"]
+
+// let text = "Hello World";
+
+// console.log(text.replace("World", "Diana"));
+// // Hello Diana
+
+// let url = "https://example.com";
+
+// console.log(url.startsWith("https")); // true
+
+// let file = "profile.jpg";
+
+// console.log(file.endsWith(".jpg")); // true
+
+
+// let text = "Hello world";
+
+// console.log(text.indexOf("world")); // 6
+
+
+// let text = "The rain is beautiful.";
+
+// let result = text.search("rain");
+
+// console.log(result);
+
+// let text = "The rain is beautiful.";
+
+// console.log(text.search("sun"));
+
+
+// let text = "My phone number is 0911223344";
+
+// let result = text.search(/[0-9]/);
+
+// console.log(result);
+
+// let text = "The rain is beautiful.";
+
+// let result = text.match("rain");
+
+// console.log(result);
+// console.log(result.index);
+// console.log(result.input);
+// console.log(result[0]);
+
+
+// let text = "The rain in Spain stays mainly in the plain.";
+
+// let result = text.match(/ain/g);
+
+// console.log(result);
+
+// // The g means global, so it finds all matches instead of just the first one.
+
+// // Without g:
+
+// let text = "The rain in Spain stays mainly in the plain.";
+
+
+// console.log(text.match(/ain/));
+
+
+// let text = "The rain in Spain stays mainly in the plain.";
+
+// let results = text.matchAll(/ain/g);
+
+// for (let result of results) {
+//     console.log(result);
+// }
+
+
+let text = "The rain in Spain stays mainly in the plain.";
+
+let results = text.matchAll(/ain/g);
+
+for (let result of results) {
+    console.log(result[0]); // matched text
+    console.log(result.index); // position
 }
-
-console.log(canNest([1, 2, 3], [0, 4])); // true
-console.log(canNest([1, 2, 3], [0, 4, 5])); // true
-console.log(canNest([1, 2, 3], [0, 2])); // false
