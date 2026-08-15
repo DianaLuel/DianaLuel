@@ -358,10 +358,22 @@ function magicArray(arr) {
 
     if (sum === arr[0]) {
         // return `Array ${arr} is magicArray.`;
-        return `Array ${arr} is magicArray.`
+        return `Array ${arr} is magicArray. and Sum is ${sum}`
     }
     return `Array ${arr} is not magicArray.`;
 }
 
 
 console.log(magicArray([10, 2, 3, 5])); // true
+
+console.log(magicArray([21, 3, 7, 9, 11, 4, 6]));
+
+console.log(magicArray([13, 4, 4, 4, 4]));
+
+console.log(magicArray([10, 5, 5]));
+
+console.log(magicArray([0, 6, 8, 20]));
+
+console.log(magicArray([13, 5, -5, 5, 3]));
+
+console.log(magicArray([8, 5, -5, 5, 3]));
