@@ -332,48 +332,66 @@
 
 
 
-// MAGIC ARRAY
+// // MAGIC ARRAY
 
-function magicArray(arr) {
-    let primeNumbers = [];
-    for (let i=0; i < arr.length; i++) {
-        let isPrime = arr[i] > 1;
+// function magicArray(arr) {
+//     let primeNumbers = [];
+//     for (let i=0; i < arr.length; i++) {
+//         let isPrime = arr[i] > 1;
 
-        for ( let j=2; j < arr[i]; j++) {
-            if (arr[i] % j === 0) {
-                isPrime = false;
-                break;
+//         for ( let j=2; j < arr[i]; j++) {
+//             if (arr[i] % j === 0) {
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+
+//         if (isPrime) {
+//             primeNumbers.push(arr[i]);
+//         }
+//     }
+
+//     let sum = 0;
+//     for (let i=0; i < primeNumbers.length; i++) {
+//         sum += primeNumbers[i];
+//     }
+
+//     if (sum === arr[0]) {
+//         // return `Array ${arr} is magicArray.`;
+//         return `Array ${arr} is magicArray. and Sum is ${sum}`
+//     }
+//     return `Array ${arr} is not magicArray.`;
+// }
+
+
+// console.log(magicArray([10, 2, 3, 5])); // true
+
+// console.log(magicArray([21, 3, 7, 9, 11, 4, 6]));
+
+// console.log(magicArray([13, 4, 4, 4, 4]));
+
+// console.log(magicArray([10, 5, 5]));
+
+// console.log(magicArray([0, 6, 8, 20]));
+
+// console.log(magicArray([13, 5, -5, 5, 3]));
+
+// console.log(magicArray([8, 5, -5, 5, 3]));
+
+
+// BUUBLE SORT
+
+console.log(bubbleSort([2, 3, 5, 7, 18, 11, 1, 9, 6, 7]));
+
+function bubbleSort(arr) {
+    for (let i =0; i < arr.length; i++) {
+        for (let j=0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j+1]) {
+                let temp = arr[j];
+                arr[j]= arr[j+1];
+                arr[j+1] = temp;
             }
         }
-
-        if (isPrime) {
-            primeNumbers.push(arr[i]);
-        }
     }
-
-    let sum = 0;
-    for (let i=0; i < primeNumbers.length; i++) {
-        sum += primeNumbers[i];
-    }
-
-    if (sum === arr[0]) {
-        // return `Array ${arr} is magicArray.`;
-        return `Array ${arr} is magicArray. and Sum is ${sum}`
-    }
-    return `Array ${arr} is not magicArray.`;
+    return arr;
 }
-
-
-console.log(magicArray([10, 2, 3, 5])); // true
-
-console.log(magicArray([21, 3, 7, 9, 11, 4, 6]));
-
-console.log(magicArray([13, 4, 4, 4, 4]));
-
-console.log(magicArray([10, 5, 5]));
-
-console.log(magicArray([0, 6, 8, 20]));
-
-console.log(magicArray([13, 5, -5, 5, 3]));
-
-console.log(magicArray([8, 5, -5, 5, 3]));
