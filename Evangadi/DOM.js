@@ -45,19 +45,35 @@
 
 
 
-// Create an Object
-const person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 50
-};
+// // Create an Object
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50
+// };
 
-// Destructuring
-let {firstName, lastName, country = "US"} = person;
+// // Destructuring
+// let {firstName, lastName, country = "US"} = person;
 
-let text = "";
-for (let key in person) {
-  text += `${key}: ${person[key]}<br>`;
-}
+// let text = "";
+// for (let key in person) {
+//   text += `${key}: ${person[key]}<br>`;
+// }
 
-document.getElementById("demo").innerHTML = text;
+// document.getElementById("demo").innerHTML = text;
+
+// // You can not loop in getElementByClassName(because it return live DOM) but you can loop in GetElementByTagName(because it doesn't return live DOM) also getQuerySelectionAll
+// // but you can convert it to Array before you start working the live DOM cause Array is not live DOM
+
+
+// i dont have the index for this but here a code from evanagadi dom manipulation traversing between multiple elements
+let element = document.querySelector(".yellow");
+let bigBrother = element.previousElementSibling;
+let littleBrother = element.nextElementSibling;
+let bigBrother = element.firstElementChild;
+let littleBrother = element.lastElementChild;
+
+// we can select the parent which is in this case ul by using parentNode
+// the whole list
+let bigBrother = element.parentNode;
+
