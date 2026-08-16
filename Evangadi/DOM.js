@@ -24,10 +24,21 @@
 // // querySelectorAll --> but they are not array
 
 
-// Date Object
-const date = new Date("2022-03-25");
+// // Date Object
+// const date = new Date("2022-03-25");
 
-console.log(date.getDate());
-console.log(date.getDay());
+// console.log(date.getDate());
+// console.log(date.getDay());
 
 
+// Create an Object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50
+};
+
+// Destructuring
+let {firstName, lastName} = person;
+
+console.log(firstName, lastName);
