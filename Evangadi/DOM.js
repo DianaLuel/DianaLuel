@@ -31,6 +31,20 @@
 // console.log(date.getDay());
 
 
+// // Create an Object
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50
+// };
+
+// // Destructuring
+// let {firstName, lastName} = person;
+
+// console.log(firstName, lastName);
+
+
+
 // Create an Object
 const person = {
   firstName: "John",
@@ -39,6 +53,11 @@ const person = {
 };
 
 // Destructuring
-let {firstName, lastName} = person;
+let {firstName, lastName, country = "US"} = person;
 
-console.log(firstName, lastName);
+let text = "";
+for (let key in person) {
+  text += `${key}: ${person[key]}<br>`;
+}
+
+document.getElementById("demo").innerHTML = text;
