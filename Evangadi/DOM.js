@@ -66,14 +66,19 @@
 // // but you can convert it to Array before you start working the live DOM cause Array is not live DOM
 
 
-// i dont have the index for this but here a code from evanagadi dom manipulation traversing between multiple elements
-let element = document.querySelector(".yellow");
-let bigBrother = element.previousElementSibling;
-let littleBrother = element.nextElementSibling;
-let bigBrother = element.firstElementChild;
-let littleBrother = element.lastElementChild;
+// // i dont have the index for this but here a code from evanagadi dom manipulation traversing between multiple elements
+// let element = document.querySelector(".yellow");
+// let bigBrother = element.previousElementSibling;
+// let littleBrother = element.nextElementSibling;
+// let bigBrother = element.firstElementChild;
+// let littleBrother = element.lastElementChild;
 
-// we can select the parent which is in this case ul by using parentNode
-// the whole list
-let bigBrother = element.parentNode;
+// // we can select the parent which is in this case ul by using parentNode
+// // the whole list
+// let bigBrother = element.parentNode;
 
+
+let element = document.getElementById("two");
+element.className = "pink";
+
+element.textContent = "Ice Cream";
