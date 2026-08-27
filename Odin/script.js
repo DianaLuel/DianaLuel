@@ -22,3 +22,11 @@ content2.innerHTML = "<h1>I'm in a div</h1>";
 content2.innerHTML += "<p>ME TOO</p>";
 
 container.appendChild(content2);
+
+
+// Event
+
+const btn = document.querySelector("#btn");
+btn.onclick = () => {
+    alert("Hello World second!");
+}
