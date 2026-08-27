@@ -48,3 +48,19 @@ function alertFunction() {
 const second = document.querySelector("#second");
 const button = second.querySelector("button");
 button.setAttribute('style', 'color: blue');
+
+// the JavaScript file
+// METHODS 2 & 3
+// function alertFunction() {
+//   alert("YAY! YOU DID IT!");
+// }
+
+const secBtn = second.querySelector("#btnn");
+
+// METHOD 2
+secBtn.onclick = alertFunction;
+
+// METHOD 3
+const thirdBtn = second.querySelector("#bttn");
+
+thirdBtn.addEventListener("click", alertFunction);
