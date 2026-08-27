@@ -73,3 +73,14 @@ const me = second.querySelector("#me");
     e.target.style.background = "blue";
  }
  );
+
+ // Attaching listeners to groups of nodes
+
+const bunch = document.querySelector("#monkey");
+const buttons = bunch.querySelectorAll("button");
+
+buttons.forEach( (button) => {
+    button.addEventListener("click", () => {
+        alert(`one of us is clickeddddddddddd, which is ${button.id}`);
+    });
+});
