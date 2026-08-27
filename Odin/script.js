@@ -64,3 +64,12 @@ secBtn.onclick = alertFunction;
 const thirdBtn = second.querySelector("#bttn");
 
 thirdBtn.addEventListener("click", alertFunction);
+
+
+// change style with event
+
+const me = second.querySelector("#me");
+ me.addEventListener('click', function (e) {
+    e.target.style.background = "blue";
+ }
+ );
