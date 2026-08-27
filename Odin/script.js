@@ -37,3 +37,14 @@ const man = document.querySelector("#man");
 man.addEventListener('click', () => {
     alert("Hi Ladies.");
 })
+
+// ANother method - Function
+
+
+function alertFunction() {
+    alert("YAY! You did it.");
+}
+
+const second = document.querySelector("#second");
+const button = second.querySelector("button");
+button.setAttribute('style', 'color: blue');
