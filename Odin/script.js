@@ -30,3 +30,10 @@ const btn = document.querySelector("#btn");
 btn.onclick = () => {
     alert("Hello World second!");
 }
+
+// Event Listener
+
+const man = document.querySelector("#man");
+man.addEventListener('click', () => {
+    alert("Hi Ladies.");
+})
