@@ -80,5 +80,6 @@
 
 let element = document.getElementById("two");
 element.className = "pink";
-
 element.textContent = "Ice Cream";
+let pinkElement = document.getElementsByClassName("pink");
+pinkElement[0].style.color = "pink";
