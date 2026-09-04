@@ -88,3 +88,11 @@ button:hover {
     display: block;
     margin: 10px auto;
 }
+
+
+.blue {
+    background-color: #4a90e2;
+}
+.gray {
+    background-color: #7f8c8d;
+}

@@ -84,17 +84,40 @@
 // let pinkElement = document.getElementsByClassName("pink");
 // pinkElement[0].style.color = "pink";
 
+// // Ways to bind an event (HTML and traditional DOM event handlers)
+
+// function changeBackgroundToBlue() {
+//     let element = document.getElementsByClassName("mood-box")[0];
+//     element.style.backgroundColor = "blue";
+// }
+
+// function changeBackground() {
+//     let element = document.getElementsByClassName("mood-box")[0];
+//     element.style.backgroundColor = "lightgray";
+// }
+
+// function resetBackground() {
+//     let element = document.getElementsByClassName("mood-box")[0];
+//     element.style.backgroundColor = "";
+// }
+
+// Better way
+
 function changeBackgroundToBlue() {
     let element = document.getElementsByClassName("mood-box")[0];
-    element.style.backgroundColor = "blue";
+    element.classList.remove("gray");
+    element.classList.add("blue");
 }
 
 function changeBackground() {
     let element = document.getElementsByClassName("mood-box")[0];
-    element.style.backgroundColor = "lightgray";
+    element.classList.remove("blue");
+    element.classList.add("gray");
 }
 
 function resetBackground() {
     let element = document.getElementsByClassName("mood-box")[0];
-    element.style.backgroundColor = "";
+    element.classList.remove("blue", "gray");
 }
+
+
