@@ -119,9 +119,12 @@ function resetBackground() {
     let element = document.getElementsByClassName("mood-box")[0];
     element.classList.remove("blue", "gray");
 }
-// Traditional DOM event handlers
+
+
 
 let resetBg = document.getElementsByClassName("resetbg")[0];
-// resetBg.addEventListener("mouseover", resetBackground);
-resetBg.onmouseover = resetBackground;
+// // Traditional DOM event handlers
+// resetBg.onmouseover = resetBackground;
+// DOM level event listeners
+resetBg.addEventListener("mouseover", resetBackground);
 
