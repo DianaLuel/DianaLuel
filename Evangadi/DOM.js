@@ -121,7 +121,6 @@ function resetBackground() {
 }
 
 
-
 let resetBg = document.getElementsByClassName("resetbg")[0];
 // // Traditional DOM event handlers
 // resetBg.onmouseover = resetBackground;
