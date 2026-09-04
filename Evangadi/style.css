@@ -81,3 +81,10 @@ button:hover {
     color: #9b818c;
     font-style: italic;
 }
+
+#changebgblue,
+#changebggray,
+#resetbg {
+    display: block;
+    margin: 10px auto;
+}

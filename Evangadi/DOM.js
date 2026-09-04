@@ -78,8 +78,23 @@
 // let bigBrother = element.parentNode;
 
 
-let element = document.getElementById("two");
-element.className = "pink";
-element.textContent = "Ice Cream";
-let pinkElement = document.getElementsByClassName("pink");
-pinkElement[0].style.color = "pink";
+// let element = document.getElementById("two");
+// element.className = "pink";
+// element.textContent = "Ice Cream";
+// let pinkElement = document.getElementsByClassName("pink");
+// pinkElement[0].style.color = "pink";
+
+function changeBackgroundToBlue() {
+    let element = document.getElementsByClassName("mood-box")[0];
+    element.style.backgroundColor = "blue";
+}
+
+function changeBackground() {
+    let element = document.getElementsByClassName("mood-box")[0];
+    element.style.backgroundColor = "lightgray";
+}
+
+function resetBackground() {
+    let element = document.getElementsByClassName("mood-box")[0];
+    element.style.backgroundColor = "";
+}
