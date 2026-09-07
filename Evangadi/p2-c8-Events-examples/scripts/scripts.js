@@ -40,7 +40,8 @@ el.addEventListener("click", nightmode);
 
 function nightmode() {
   let el = document.getElementsByTagName("body");
-  el[0].classList.add("nightmode");
+  // el[0].classList.add("nightmode");
+  el[0].classList.toggle("nightmode");
 }
 
 // Form Controller Exercise
