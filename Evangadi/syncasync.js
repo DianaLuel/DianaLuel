@@ -17,29 +17,47 @@
 // console.log("This is unrelated to the timer above but here we go we run ater the timer function finished");
 
 
-// // Asyncronus 
+// // // Asyncronus 
 
-console.log("Task 1");
+// console.log("Task 1");
 
-setTimeout(() => {
-    console.log("Task 2");
-}, 2000);
+// setTimeout(() => {
+//     console.log("Task 2");
+// }, 2000);
 
-console.log("Task 3");
+// console.log("Task 3");
 
 
-var x;
-console.log("Hi");
-function greet(seconds) {
+// var x;
+// console.log("Hi");
+// function greet(seconds) {
+//     setTimeout(() => {
+//         x = "Hello";
+//         console.log("hi from setTimeout");
+//     }, seconds * 1000);
+// }
+
+// greet(0);
+
+// console.log("selam new");
+
+
+// console.log(x); // undefined because the setTimeout has not executed yet
+
+
+// Callback function
+
+function orderPizza(callback) {
+    console.log("Ordering pizza...");
     setTimeout(() => {
-        x = "Hello";
-        console.log("hi from setTimeout");
-    }, seconds * 1000);
+        const pizza = "🍕";
+        console.log(`Your ${pizza} is ready!`);
+        callback(pizza);
+    }, 2000);
 }
 
-greet(0);
+function pizzaReady(pizza) {
+    console.log(`Enjoy your ${pizza}!`);
+}
 
-console.log("selam new");
-
-
-console.log(x); // undefined because the setTimeout has not executed yet
+orderPizza(pizzaReady);
