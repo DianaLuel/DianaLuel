@@ -61,3 +61,5 @@ function pizzaReady(pizza) {
 }
 
 orderPizza(pizzaReady);
+
+console.log("This message is printed while waiting for the pizza to be ready.");
