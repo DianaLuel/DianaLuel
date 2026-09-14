@@ -17,7 +17,7 @@
 // console.log("This is unrelated to the timer above but here we go we run ater the timer function finished");
 
 
-// Asyncronus 
+// // Asyncronus 
 
 console.log("Task 1");
 
@@ -26,3 +26,20 @@ setTimeout(() => {
 }, 2000);
 
 console.log("Task 3");
+
+
+var x;
+console.log("Hi");
+function greet(seconds) {
+    setTimeout(() => {
+        x = "Hello";
+        console.log("hi from setTimeout");
+    }, seconds * 1000);
+}
+
+greet(0);
+
+console.log("selam new");
+
+
+console.log(x); // undefined because the setTimeout has not executed yet
