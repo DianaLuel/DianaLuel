@@ -28,6 +28,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
 }
 
 .left-section .upper-section {
@@ -45,38 +47,105 @@ body {
 }
 
 .left-section:hover {
-    background-image: linear-gradient(to bottom right, #4a5568, #1d242d);
+    background-image: linear-gradient(
+            to bottom right,
+            rgba(78, 186, 236, 0.9),
+            rgba(75, 85, 217, 0.9)
+        ),
+    url('https://oceangeneration.org/wp-content/uploads/2023/03/OceanGeneration-Homepage-DonateToProtectOcean.png');
+
+
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
 }
 
 .right-section {
     width: 50%;
-    /* border-radius: 0 15px 15px 0; */
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .weather-details {
     display: flex;
-    gap: 80px;
+    justify-content: space-between;
 }
 
 .weather-details .values {
     text-align: right;
 }
 
+.titles,
+.values {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .forecast {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    background-color: #22262e;
+    border-radius: 10px;
+}
+
+.forecast > div {
+    width: 80px;
+    height: 120px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.forecast > div:hover {
+    background-color: white;
+    color: #1e1e1e;
+}
+
+.forecast .forecast-temperature {
+    font-weight: extra-bold;
 }
 
 button {
-    background: linear-gradient( to right, #4ebaec, #0462dd);
+    width: 100%;
+    background: linear-gradient(to right, #4ebaec, #0462dd);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    
 }
+
+.day {
+    font-size: 36px;
+}
+
+.date, .location {
+    font-size: 18px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.temperature .temperature-value {
+    font-size: 48px;
+}
+
+.temperature .weather-description {
+    font-size: 24px;
+}
+
+.weather-icon {
+    font-size: 40px;
+}
+
