@@ -1,30 +1,69 @@
-function walkDog(callback) {
+// // CALLBACK
+
+// function walkDog(callback) {
     
-    setTimeout(() => {
-        console.log("Walking the dog...");
-    callback();
-    }, 1500);
+//     setTimeout(() => {
+//         console.log("Walking the dog...");
+//     callback();
+//     }, 1500);
+// }
+
+// function cleanKitchen(callback) {
+//     setTimeout(() => {
+//         console.log("Cleaning the kitchen...");
+//         callback();
+//     }, 1000);
+// }
+
+// function takeOutTrash(callback) {
+//     setTimeout(() => {
+//         console.log("Taking out the trash...");
+//         callback();
+//     }, 500);
+// }
+
+
+// walkDog(() => {
+//     cleanKitchen(() => {
+//         takeOutTrash(() => {
+//             console.log("All tasks completed!");
+//         })
+//     })
+// })
+
+
+// PROMISES
+
+function walkDog() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Walking the dog...");
+        }, 1500);
+    });
 }
 
-function cleanKitchen(callback) {
-    setTimeout(() => {
-        console.log("Cleaning the kitchen...");
-        callback();
-    }, 1000);
+function cleanKitchen() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Cleaning the kitchen...");
+        }, 2000);
+    });
 }
 
-function takeOutTrash(callback) {
-    setTimeout(() => {
-        console.log("Taking out the trash...");
-        callback();
-    }, 500);
+function takeOutTrash() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Taking out the trash...");
+        }, 500);
+    });
 }
 
-
-walkDog(() => {
-    cleanKitchen(() => {
-        takeOutTrash(() => {
-            console.log("All tasks completed!");
-        })
-    })
-})
+walkDog().then((message) => {
+    console.log(message);
+    return cleanKitchen();
+}).then((message) => {
+    console.log(message);
+    return takeOutTrash();
+}).then((message) => {
+    console.log(message);
+});
