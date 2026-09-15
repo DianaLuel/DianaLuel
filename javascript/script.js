@@ -58,12 +58,6 @@ function takeOutTrash() {
     });
 }
 
-walkDog().then((message) => {
-    console.log(message);
-    return cleanKitchen();
-}).then((message) => {
-    console.log(message);
-    return takeOutTrash();
-}).then((message) => {
-    console.log(message);
-});
+walkDog().then((message) => { console.log(message); return cleanKitchen(); })
+        .then((message) => { console.log(message); return takeOutTrash(); })
+        .then((message) => { console.log(message); console.log("All tasks completed!"); });
