@@ -2,6 +2,11 @@ function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London"];
   items.push("Paris");
   // items = [];
+
+  const clickHandler = (item: string) => {
+    console.log(item);
+  }
+
   return (
     <>
         <h1>List Group</h1>
@@ -9,7 +14,7 @@ function ListGroup() {
         {items.length > 0 && (
           <ul className="list-group">
             {items.map((item) => (
-              <li className="list-group-item" key={item}>
+              <li className="list-group-item" key={item} onClick={() => clickHandler(item)}>
                 {item}
               </li>
             ))}
