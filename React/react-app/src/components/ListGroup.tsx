@@ -1,28 +1,18 @@
 import { useState, type MouseEvent } from "react";
 
-function ListGroup() {
-  let items = ["New York", "San Francisco", "Tokyo", "London"];
-  items.push("Paris");
-  // items = [];
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
 
-  const clickHandler = (item: string) => {
-    console.log(item);
-  };
+// function ListGroup(Probs: ListGroupProps) {
+    // If we wrote this we would have used
+    // Probs.items.length and Probs.heading instead of items.length and heading
 
-  const handleClick = (event: MouseEvent) => {
-    console.log(event);
-  };
-
-  // let selectedIndex = 0;
-
+function ListGroup({ items, heading }: ListGroupProps) {
+  
   //Hook
-  const arr = useState(-1);
-  arr[0]; // selectedItem
-  arr[1]; // setSelectedItem
-
-  // but instead of thiss we can change arr to 
-  // const [selectedIndex, setSelectedIndex] = useState(-1);
-  // and use these instead of arr[0] and arr[1]
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
@@ -33,12 +23,12 @@ function ListGroup() {
           {items.map((item, index) => (
             <li
               className={
-                arr[0] === index
+                selectedIndex === index
                   ? "list-group-item active"
                   : "list-group-item"
               }
               key={item}
-              onClick={() => arr[1](index)}
+              onClick={() => setSelectedIndex(index)}
             >
               {item}
             </li>
@@ -50,21 +40,3 @@ function ListGroup() {
 }
 
 export default ListGroup;
-
-/* <ul className="list-group">
-      {items.map((item) => (
-        <li className="list-group-item" key={item}>
-          {item}
-        </li>
-      ))}
-    </ul> */
-
-// <h1>List Group</h1>
-//     {items.length == 0 && <p>No item found</p>}
-//     <ul className="list-group">
-//       {items.map((item) => (
-//         <li className="list-group-item" key={item}>
-//           {item}
-//         </li>
-//       ))}
-//     </ul>
