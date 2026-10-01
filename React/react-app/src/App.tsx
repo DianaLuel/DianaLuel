@@ -8,6 +8,7 @@ countries.push("Paris");
 let names = ["Alice", "Bob", "Charlie", "David", "Eve"];
 
 let students = ["John", "Jane", "Jim", "Jill", "Jack"]; 
+// students = [];
 
 function App() {
   return <div>
