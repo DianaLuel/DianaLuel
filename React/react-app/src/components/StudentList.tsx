@@ -16,6 +16,7 @@ function StudentList({ students, heading }: StudentListProps) {
         <ul className="list-group">
           {students.map((student, index) => (
             <li
+              key={student}
               className={
                 selectedStudentIndex === index
                   ? "list-group-item active"
