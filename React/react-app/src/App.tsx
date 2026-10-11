@@ -12,11 +12,15 @@ let students = ["John", "Jane", "Jim", "Jill", "Jack"];
 
 let teachers = ["Mr. Smith", "Ms. Johnson", "Mrs. Brown", "Mr. Lee", "Ms. Davis"];
 
+const handleSelectItem = (item: string) => {
+  console.log(`Selected item: ${item}`);
+}
+
 function App() {
   return <div>
   <Message />
-  <ListGroup items={countries} heading="Countries" />
-  <ListGroup items={names} heading="Names" />
+  <ListGroup items={countries} heading="Countries" onSelectItem={handleSelectItem} />
+  <ListGroup items={names} heading="Names" onSelectItem={handleSelectItem} />
   <StudentList students={students} heading="Students" />
   <StudentList students={teachers} heading="Teachers" />
   </div>
