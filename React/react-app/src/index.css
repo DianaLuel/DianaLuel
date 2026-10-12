@@ -1,0 +1,8 @@
+.FruitList-item {
+  cursor: pointer;
+}
+
+.FruitList-item.active {
+  background-color: dodgerblue;
+  color: white;
+}
